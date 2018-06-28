@@ -18,7 +18,7 @@ class ExchangesManager {
 
   
   func startGetingData() {
-    binanceManager.start()
+//    binanceManager.start()
 //    startCollectionDataFromExchanges()
   }
   
