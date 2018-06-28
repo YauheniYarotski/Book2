@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Jobs
+//import Jobs
 import ObjectMapper
 
 class MainManager {
@@ -21,9 +21,9 @@ class MainManager {
   
   
   private func startCollectionDataFromExchanges() {
-    Jobs.add(interval: .seconds(2)) {
-      self.getAndWriteDataToAgregator()
-    }
+//    Jobs.add(interval: .seconds(2)) {
+//      self.getAndWriteDataToAgregator()
+//    }
   }
   
   private func getAndWriteDataToAgregator() {
@@ -31,9 +31,9 @@ class MainManager {
   }
   
   private func startSendingDataToWs() {
-    Jobs.add(interval: .seconds(2)) {
-      self.sendToWs()
-    }
+//    Jobs.add(interval: .seconds(2)) {
+//      self.sendToWs()
+//    }
   }
   
   private func sendToWs() {

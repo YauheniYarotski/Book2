@@ -14,7 +14,7 @@ class BinanceManager {
   func start() {
     binanceWs.start() { binanceNewLevels in
       for (_, newLevels) in binanceNewLevels {
-        self.add(newLevels: newLevels)
+//        self.add(newLevels: newLevels)
         print(self.book)
       }
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 //import Jobs
-import Jobs
+//import Jobs
 import Dispatch
 
 class ExchangesManager {
@@ -18,15 +18,15 @@ class ExchangesManager {
 
   
   func startGetingData() {
-//    binanceManager.start()
+    binanceManager.start()
 //    startCollectionDataFromExchanges()
   }
   
   
   private func startCollectionDataFromExchanges() {
-    Jobs.add(interval: .seconds(2)) {
-      self.getDataFromExchanges()
-    }
+//    Jobs.add(interval: .seconds(2)) {
+//      self.getDataFromExchanges()
+//    }
   }
   
   func getDataFromExchanges() {
