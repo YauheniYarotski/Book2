@@ -1,1 +1,25 @@
+import PerfectHTTP
+import PerfectHTTPServer
+
 print("Hello, world!")
+
+
+AppDelegate.shared.start()
+
+
+// Register your own routes and handlers
+var routes = Routes()
+routes.add(method: .get, uri: "/") {
+  request, response in
+  response.setHeader(.contentType, value: "text/html")
+  response.appendBody(string: "<html><title>Hello, world!</title><body>Hello, world!</body></html>")
+    .completed()
+}
+
+do {
+  // Launch the HTTP server.
+  try HTTPServer.launch(
+    .server(name: "www.example.ca", port: 8181, routes: routes))
+} catch {
+  fatalError("\(error)") // fatal error launching one of the servers
+}
